@@ -1,18 +1,17 @@
 ---
 tags: tip
-title: Dangit, I did something terribly wrong, please tell me git has a magic time machine!?!
+title: 厚，我犯了一個很嚴重的錯誤，拜托告訴我 git 有個魔法時光機功能？！？
 id: magic-time-machine
 order: 1
 ---
 
 ```git
 git reflog
-# you will see a list of every thing you've 
-# done in git, across all branches!
-# each one has an index HEAD@{index}
-# find the one before you broke everything
+# 你將看到一個清單，裡面是你在 git 裡所有分支裡做過的所有更動！
+# 每一個項目都有一個索引 HEAD@{index}
+# 找到在你犯錯的前一個項目
 git reset HEAD@{index}
-# magic time machine
+# 讚啦，魔法時光機萬歲
 ```
 
-You can use this to get back stuff you accidentally deleted, or just to remove some stuff you tried that broke the repo, or to recover after a bad merge, or just to go back to a time when things actually worked. I use `reflog` A LOT. Mega hat tip to the many many many many many people who suggested adding it!
+你可以用這個功能來找回你不小心刪掉的東西、取消你在這個 repo 的錯誤操作、取消一個有問題的 merge、又或是回到上一個還可以執行的版本。我超常用 `reflog`，超級無敵感謝那些推薦我加上這項的人們！

@@ -1,18 +1,17 @@
 ---
 tags: tip
-title: Dangit, I need to undo my changes to a file!
+title: 厚，我得取消一個檔案的修改！
 id: undo-a-file
 order: 8
 ---
 
 ```git
-# find a hash for a commit before the file was changed
+# 用方向鍵上下瀏覧歷史，找到一個該檔案被修改前的提交
 git log
-# use the arrow keys to scroll up and down in history
-# once you've found your commit, save the hash
+# 記下該提交的 hash 值
 git checkout [saved hash] -- path/to/file
-# the old version of the file will be in your index
+# 現在該檔案的舊版本在你的暫存區了
 git commit -m "Wow, you don't have to copy-paste to undo"
 ```
 
-When I finally figured this out it was HUGE. HUGE. H-U-G-E. But seriously though, on what planet does `checkout --` make sense as the best way to undo a file? :shakes-fist-at-linus-torvalds:
+我的整個世界都在我學到這個的那瞬間徹底改變了。真的。好啦話說回來，到底哪個星球的人會覺得 `checkout --` 是一個還原檔案指令的好名字？ （對著 Linux Torvalds 折手指）

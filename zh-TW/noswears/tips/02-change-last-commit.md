@@ -1,18 +1,18 @@
 ---
 tags: tip
-title: Dangit, I committed and immediately realized I need to make one small change!
+title: 厚，我在提交完之後才想起來還有個東西要改！
 id: change-last-commit
 order: 2
 ---
 
 ```git
-# make your change
-git add . # or add individual files
+# 完成你的修改
+git add . # 或加入指定的檔案
 git commit --amend --no-edit
-# now your last commit contains that change!
-# WARNING: never amend public commits
+# 現在你最新的 commit 包含了你剛剛的修改!
+# 警告：不要 amend 公開的 commit
 ```
 
-This usually happens to me if I commit, then run tests/linters... and ugh, I didn't put a space after an equals sign. You could also make the change as a new commit and then do `rebase -i` in order to squash them both together, but this is about a million times faster. 
+我常常在提交後執行測試或 linter 時遇到這種情況，「厚，我忘了在等號後放空格」。你也可以提交一個新的 commit，再執行 `rebase -i` 來合併這兩個 commit，不過相較之下 amend 快了幾十萬倍。
 
-*Warning: You should never amend commits that have been pushed up to a public/shared branch! Only amend commits that only exist in your local copy or you're gonna have a bad time.*
+*警告：你絕對不應該在一個公開／共用的分支上 amend 已被推送的 commit！你只應該對你本機分支 amend，不然你會很慘。*

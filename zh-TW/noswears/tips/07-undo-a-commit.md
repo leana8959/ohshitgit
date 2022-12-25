@@ -1,21 +1,18 @@
 ---
 tags: tip
-title: Dangit, I need to undo a commit from like 5 commits ago!
+title: 厚，我得取消上上上上上個提交！
 id: undo-a-commit
 order: 7
 ---
 
 ```git
-# find the commit you need to undo
+# 找到你要取消的提交
 git log
-# use the arrow keys to scroll up and down in history
-# once you've found your commit, save the hash
+# 用方向鍵來上下瀏覧歷史，記下那個提交的 hash 值
 git revert [saved hash]
-# git will create a new commit that undoes that commit
-# follow prompts to edit the commit message 
-# or just save and commit
+# git 會建立一個新的提交來取消你剛剛指定的提交
+# 輸入你的提交訊息，你也可以直接退出並使用預設值
 ```
 
-Turns out you don't have to track down and copy-paste the old file contents into the existing file in order to undo changes! If you committed a bug, you can undo the commit all in one go with `revert`.
-
-You can also revert a single file instead of a full commit! But of course, in true git fashion, it's a completely different set of commands...
+原來不用自己手動找回檔案的舊內容然後複製貼上！如果你弄錯了什麼，只要用 `revert` 就能還原。
+與其還原所有檔案，你也可以只還原你所指定的檔案！不過，正統 Git 風格的指令才沒這麼簡單⋯⋯

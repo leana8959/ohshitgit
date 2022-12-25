@@ -1,6 +1,6 @@
 ---
 tags: tip
-title: 靠，我犯了一個很嚴重的錯誤，拜托告訴我 git 有個魔法時光機功能？！？
+title: 靠，我犯了一個很嚴重的錯誤，拜托告訴我 Git 有個魔法時光機功能？！？
 id: magic-time-machine
 order: 1
 ---

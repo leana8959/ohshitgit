@@ -1,6 +1,6 @@
 ---
 tags: tip
-title: Forget this noise, I give up.
+title: 我投降。
 id: forget-this-noise
 note: this should always be the last one in the list, so setting order to 20 so I don't have to re-name/re-order it
 order: 20
@@ -12,18 +12,16 @@ sudo rm -r stupid-git-repo-dir
 git clone https://some.github.url/stupid-git-repo-dir.git
 cd stupid-git-repo-dir
 ```
+謝謝 Eric V. 提供這則建議。如果你對使用 `sudo` 不滿的話，可以去找他踹共。
 
-Thanks to Eric V. for this one. All complaints about the use of `sudo` in this joke can be directed to him. 
-
-
-For real though, if your branch is sooo borked that you need to reset the state of your repo to be the same as the remote repo in a "git-approved" way, try this, but beware these are destructive and unrecoverable actions!
+好啦認真認真，如果你的分支真的被徹底的毀了，然後你想要中規中矩的把你的本機倉儲重設成遠端倉儲的狀態，試試下面的方法。請注意，你無法取消以下操作！
 
 ```git
-# get the lastest state of origin
+# 取得 origin 的最新狀態
 git fetch origin
 git checkout master
 git reset --hard origin/master
-# delete untracked files and directories
+# 刪除未被追蹤的檔案
 git clean -d --force
-# repeat checkout/reset/clean for each borked branch
+# 對每個廢掉的分支都進行同樣的操作
 ```
